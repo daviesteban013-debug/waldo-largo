@@ -1,0 +1,115 @@
+@baseUrl = http://localhost:4000
+@frontendUrl = http://localhost:5173
+
+### Health check
+GET {{baseUrl}}/health
+
+### ─── Auth ───
+
+### Login
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "change-me-strong-password"
+}
+
+### Get current user (requires session cookie from login)
+GET {{baseUrl}}/auth/me
+
+### Logout
+POST {{baseUrl}}/auth/logout
+
+### ─── Public Posts ───
+
+### List published posts
+GET {{baseUrl}}/posts?page=1&limit=10
+
+### Get published post by slug
+GET {{baseUrl}}/posts/mi-primer-articulo
+
+### ─── Admin Posts ───
+
+### List all posts (admin)
+GET {{baseUrl}}/admin/posts?page=1&limit=10
+
+### Get post by ID (admin)
+GET {{baseUrl}}/admin/posts/POST_ID_HERE
+
+### Create post
+POST {{baseUrl}}/admin/posts
+Content-Type: application/json
+
+{
+  "title": "Mi primer artículo",
+  "excerpt": "Un breve extracto del artículo.",
+  "content": "# Hola mundo\n\nEste es el contenido en **markdown**.",
+  "coverImageUrl": "https://example.com/cover.jpg",
+  "status": "DRAFT"
+}
+
+### Update post
+PATCH {{baseUrl}}/admin/posts/POST_ID_HERE
+Content-Type: application/json
+
+{
+  "title": "Título actualizado",
+  "excerpt": "Extracto actualizado."
+}
+
+### Publish post
+PATCH {{baseUrl}}/admin/posts/POST_ID_HERE/publish
+
+### Delete post
+DELETE {{baseUrl}}/admin/posts/POST_ID_HERE
+
+### ─── Admin Contact ───
+
+### List contact messages (admin)
+GET {{baseUrl}}/admin/contact?page=1&limit=20
+
+### ─── Admin Newsletter ───
+
+### List all subscribers (admin)
+GET {{baseUrl}}/admin/newsletter?page=1&limit=20
+
+### List only confirmed subscribers (admin)
+GET {{baseUrl}}/admin/newsletter?status=CONFIRMED&page=1&limit=20
+
+### List pending subscribers (admin)
+GET {{baseUrl}}/admin/newsletter?status=PENDING
+
+### ─── Contact ───
+
+### Submit contact form
+POST {{baseUrl}}/contact
+Content-Type: application/json
+
+{
+  "name": "Juan Pérez",
+  "email": "juan@example.com",
+  "message": "Hola, me gustaría colaborar en un proyecto editorial."
+}
+
+### ─── Newsletter ───
+
+### Subscribe
+POST {{baseUrl}}/newsletter/subscribe
+Content-Type: application/json
+
+{
+  "email": "lector@example.com"
+}
+
+### Confirm subscription (token from email)
+GET {{baseUrl}}/newsletter/confirm?token=TOKEN_FROM_EMAIL
+
+### Unsubscribe
+POST {{baseUrl}}/newsletter/unsubscribe
+Content-Type: application/json
+
+{
+  "token": "UNSUBSCRIBE_TOKEN_HERE"
+}
