@@ -8,6 +8,13 @@ const BCRYPT_ROUNDS = 12;
 export async function loginUser(input: LoginInput) {
   const user = await prisma.user.findUnique({
     where: { email: input.email.toLowerCase() },
+    select: {
+      id: true,
+      email: true,
+      name: true,
+      role: true,
+      passwordHash: true,
+    },
   });
 
   if (!user) {
@@ -19,6 +26,7 @@ export async function loginUser(input: LoginInput) {
     throw new AppError(401, "Invalid email or password");
   }
 
+  // Strictly omit passwordHash from the returned user object
   return {
     id: user.id,
     email: user.email,
@@ -41,3 +49,4 @@ export async function getUserById(id: string) {
 }
 
 export { BCRYPT_ROUNDS };
+

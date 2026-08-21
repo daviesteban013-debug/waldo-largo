@@ -4,6 +4,8 @@ import type {
   NewsletterSubscribeInput,
   NewsletterResponse,
   ApiErrorResponse,
+  PostsListResponse,
+  PostDetailResponse,
 } from "./types";
 
 const BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:4000";
@@ -56,6 +58,16 @@ async function request<T>(
   return res.json();
 }
 
+/* ─── Posts ─── */
+
+export function fetchPosts(page = 1, limit = 9): Promise<PostsListResponse> {
+  return request<PostsListResponse>(`/posts?page=${page}&limit=${limit}`);
+}
+
+export function fetchPostBySlug(slug: string): Promise<PostDetailResponse> {
+  return request<PostDetailResponse>(`/posts/${encodeURIComponent(slug)}`);
+}
+
 /* ─── Contact ─── */
 
 export function submitContact(data: ContactInput): Promise<ContactResponse> {
@@ -77,3 +89,4 @@ export function subscribeNewsletter(
 }
 
 export { ApiError };
+

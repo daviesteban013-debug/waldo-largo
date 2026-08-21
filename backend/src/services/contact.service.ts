@@ -4,6 +4,7 @@ import { env } from "../config/env";
 import { sanitizeEmail, sanitizeMessage, sanitizeName } from "../utils/sanitize";
 import { ContactInput } from "../schemas/contact.schema";
 import { ContactListQuery } from "../schemas/admin.schema";
+import { logger } from "../utils/logger";
 
 export async function submitContact(
   input: ContactInput,
@@ -46,12 +47,12 @@ export async function submitContact(
     });
 
     if (error) {
-      console.error("Failed to send contact notification email:", error);
+      logger.error("Failed to send contact notification email:", error);
     } else {
       emailNotificationSent = true;
     }
   } catch (err) {
-    console.error("Contact notification email error:", err);
+    logger.error("Contact notification email error:", err);
   }
 
   return { success: true, emailNotificationSent };

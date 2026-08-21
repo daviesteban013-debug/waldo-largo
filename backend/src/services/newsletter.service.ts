@@ -6,6 +6,7 @@ import { sanitizeEmail } from "../utils/sanitize";
 import { generateToken, hashToken } from "../utils/tokens";
 import { SubscriberListQuery } from "../schemas/admin.schema";
 import { SubscriberStatus } from "@prisma/client";
+import { logger } from "../utils/logger";
 
 const CONFIRM_TOKEN_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 
@@ -64,12 +65,13 @@ export async function subscribe(emailInput: string) {
   });
 
   if (error) {
-    console.error("Failed to send newsletter confirmation email:", error);
+    logger.error("Failed to send newsletter confirmation email:", error);
     throw new AppError(502, "Failed to send confirmation email");
   }
 
   return { success: true, message: "Confirmation email sent" };
 }
+
 
 export async function confirmSubscription(token: string) {
   const confirmTokenHash = hashToken(token);

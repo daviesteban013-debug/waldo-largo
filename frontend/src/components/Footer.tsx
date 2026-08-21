@@ -24,8 +24,8 @@ export default function Footer() {
               Navegación
             </h4>
             <nav className="flex flex-col gap-2.5">
-              <Link to="/blog" className="text-sm text-[var(--color-ink-light)] hover:text-[var(--color-ink)] transition-colors">
-                Artículos
+              <Link to="/libros" className="text-sm text-[var(--color-ink-light)] hover:text-[var(--color-ink)] transition-colors">
+                Libros
               </Link>
               <Link to="/sobre-mi" className="text-sm text-[var(--color-ink-light)] hover:text-[var(--color-ink)] transition-colors">
                 Sobre mí

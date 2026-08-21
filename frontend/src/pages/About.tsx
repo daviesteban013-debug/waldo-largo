@@ -40,9 +40,16 @@ export default function About() {
 
         {/* Image / visual column */}
         <div className="md:col-span-4 md:col-start-9 fade-in-up stagger-2">
-          <div className="aspect-[3/4] bg-[var(--color-cream)] w-full" />
+          <div className="aspect-[3/4] bg-black overflow-hidden relative w-full">
+            <img
+              src="/images/author-portrait.jpeg"
+              alt="Waldo Largo"
+              loading="lazy"
+              className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+            />
+          </div>
           <p className="mt-3 text-xs text-[var(--color-ink-muted)] italic">
-            Fotografía por venir.
+            Waldo Largo — Fotógrafo, escritor y recordador álmico.
           </p>
         </div>
       </div>
