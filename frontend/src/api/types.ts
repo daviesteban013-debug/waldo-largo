@@ -43,19 +43,10 @@ export interface ContactResponse {
   message: string;
 }
 
-/* ─── Newsletter ─── */
-
-export interface NewsletterSubscribeInput {
-  email: string;
-}
-
-export interface NewsletterResponse {
-  message: string;
-}
-
 /* ─── Generic API error ─── */
 
 export interface ApiErrorResponse {
   error: string;
   details?: Array<{ path: string; message: string }>;
 }
+

@@ -1,8 +1,6 @@
 import type {
   ContactInput,
   ContactResponse,
-  NewsletterSubscribeInput,
-  NewsletterResponse,
   ApiErrorResponse,
   PostsListResponse,
   PostDetailResponse,
@@ -77,16 +75,6 @@ export function submitContact(data: ContactInput): Promise<ContactResponse> {
   });
 }
 
-/* ─── Newsletter ─── */
-
-export function subscribeNewsletter(
-  data: NewsletterSubscribeInput,
-): Promise<NewsletterResponse> {
-  return request<NewsletterResponse>("/newsletter/subscribe", {
-    method: "POST",
-    body: JSON.stringify(data),
-  });
-}
-
 export { ApiError };
+
 

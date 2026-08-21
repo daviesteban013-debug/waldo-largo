@@ -52,16 +52,4 @@ export const contactRateLimiter = rateLimit({
   message: createLimiterResponse("Too many contact submissions. Please try again later."),
 });
 
-/**
- * Strict Newsletter Subscription Limiter
- * Protects subscription endpoint against mass registration and email bombing attacks.
- */
-export const newsletterRateLimiter = rateLimit({
-  windowMs: FIFTEEN_MINUTES,
-  max: 5, // 5 requests per 15 minutes
-  standardHeaders: "draft-7",
-  legacyHeaders: false,
-  statusCode: 429,
-  message: createLimiterResponse("Too many newsletter subscription attempts. Please try again later."),
-});
 

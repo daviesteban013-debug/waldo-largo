@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -7,19 +6,19 @@ export default function Footer() {
   return (
     <footer className="border-t border-[var(--color-border-light)] mt-24">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-start">
           {/* Column 1: Brand */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-6">
             <Link to="/" className="font-serif text-xl font-medium text-[var(--color-ink)]">
               Waldo Largo
             </Link>
-            <p className="mt-4 text-sm text-[var(--color-ink-muted)] leading-relaxed max-w-xs">
-              Escritor y ensayista. Reflexiones sobre literatura, cultura y el oficio de narrar.
+            <p className="mt-4 text-sm text-[var(--color-ink-muted)] leading-relaxed max-w-sm">
+              Escritor, fotógrafo y creador de contenido. Reflexiones sobre literatura, arte y el despertar de la conciencia.
             </p>
           </div>
 
           {/* Column 2: Navigation */}
-          <div className="md:col-span-3 md:col-start-6">
+          <div className="md:col-span-4 md:col-start-9">
             <h4 className="text-xs uppercase tracking-[0.12em] text-[var(--color-ink-muted)] mb-4 font-sans font-medium">
               Navegación
             </h4>
@@ -34,17 +33,6 @@ export default function Footer() {
                 Contacto
               </Link>
             </nav>
-          </div>
-
-          {/* Column 3: Newsletter */}
-          <div className="md:col-span-4 md:col-start-9">
-            <h4 className="text-xs uppercase tracking-[0.12em] text-[var(--color-ink-muted)] mb-4 font-sans font-medium">
-              Newsletter
-            </h4>
-            <p className="text-sm text-[var(--color-ink-muted)] mb-4">
-              Recibe los nuevos artículos en tu correo.
-            </p>
-            <NewsletterForm variant="default" />
           </div>
         </div>
 
@@ -61,3 +49,4 @@ export default function Footer() {
     </footer>
   );
 }
+

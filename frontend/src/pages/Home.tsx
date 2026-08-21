@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import NewsletterForm from "../components/NewsletterForm";
 import { books } from "../data/books";
 
 export default function Home() {
@@ -89,22 +88,8 @@ export default function Home() {
           </Link>
         </div>
       )}
-
-      {/* ─── Newsletter CTA ─── */}
-      <section className="bg-[var(--color-cream)]">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 md:py-24">
-          <div className="max-w-md">
-            <h2 className="font-serif text-2xl md:text-3xl font-medium text-[var(--color-ink)] mb-3">
-              Recibe las novedades
-            </h2>
-            <p className="text-sm text-[var(--color-ink-muted)] mb-6 leading-relaxed">
-              Nuevos lanzamientos y novedades directamente en tu correo. Sin spam, solo escritura.
-            </p>
-            <NewsletterForm variant="inline" />
-          </div>
-        </div>
-      </section>
     </>
   );
 }
+
 

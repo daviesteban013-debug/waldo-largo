@@ -16,12 +16,6 @@ enum PostStatus {
   PUBLISHED
 }
 
-enum SubscriberStatus {
-  PENDING
-  CONFIRMED
-  UNSUBSCRIBED
-}
-
 model User {
   id           String   @id @default(cuid())
   email        String   @unique
@@ -62,17 +56,4 @@ model ContactMessage {
   @@index([createdAt(sort: Desc)])
 }
 
-model NewsletterSubscriber {
-  id               String           @id @default(cuid())
-  email            String           @unique
-  status           SubscriberStatus @default(PENDING)
-  confirmTokenHash String?          @unique
-  confirmExpiresAt DateTime?
-  unsubscribeToken String           @unique @default(cuid())
-  confirmedAt      DateTime?
-  unsubscribedAt   DateTime?
-  createdAt        DateTime         @default(now())
-  updatedAt        DateTime         @updatedAt
 
-  @@index([status])
-}

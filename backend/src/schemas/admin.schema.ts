@@ -7,10 +7,6 @@ export const paginationQuerySchema = z.object({
 
 export const contactListQuerySchema = paginationQuerySchema;
 
-export const subscriberListQuerySchema = paginationQuerySchema.extend({
-  status: z.enum(["PENDING", "CONFIRMED", "UNSUBSCRIBED"]).optional(),
-});
-
 export type PaginationQuery = z.infer<typeof paginationQuerySchema>;
 export type ContactListQuery = z.infer<typeof contactListQuerySchema>;
-export type SubscriberListQuery = z.infer<typeof subscriberListQuerySchema>;
+
