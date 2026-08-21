@@ -11,19 +11,15 @@ export default function About() {
           <div className="space-y-5 text-[var(--color-ink-light)] leading-relaxed text-lg max-w-xl">
             <p>
               Soy <strong className="text-[var(--color-ink)] font-medium">Waldo Largo</strong>, escritor
-              y ensayista. Mi trabajo explora las intersecciones entre la literatura contemporánea,
-              la cultura y las formas de narrar en un mundo que cambia más rápido de lo que
-              logramos comprender.
+              Waldo Largo es un fotógrafo, escritor, director creativo y recordador álmico colombiano que busca revelar la esencia humana a través del arte.
+              Con una destacada trayectoria en fotografía de moda y retrato, ha publicado en Vogue y colaborado con importantes diseñadores, creando experiencias visuales que capturan la verdadera identidad y
+              vulnerabilidad de las personas. Como escritor, es autor de obras de transformación interior como ¿En serio? y Divino Abismo, siendo este último best seller en Amazon. A través de sus imágenes y sus libros, su propósito no es decirle a las personas quiénes deben ser, sino ayudarlas a recordar quiénes
+              han sido siempre. Waldo retrata historias, escribe memorias y despierta almas.
             </p>
             <p>
               Creo que la escritura es un acto de resistencia silenciosa: contra la prisa, contra
               lo superficial, contra el olvido. Cada ensayo es una invitación a detenerse, leer
               despacio y pensar con calma.
-            </p>
-            <p>
-              He publicado en diversas revistas literarias y medios culturales. Actualmente trabajo
-              en mi primer libro de ensayos, una colección sobre la relación entre memoria personal
-              y paisaje urbano.
             </p>
           </div>
 
