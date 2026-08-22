@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="900" height="650">
+  <defs>
+    <linearGradient id="bgGrad_02_aire-libre" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2120"/>
+      <stop offset="100%" stop-color="#131514"/>
+    </linearGradient>
+    <radialGradient id="vignette_02_aire-libre" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.5)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad_02_aire-libre)"/>
+  <rect width="100%" height="100%" fill="url(#vignette_02_aire-libre)"/>
+
+  <!-- Elegant Inner Border -->
+  <rect x="24" y="24" width="852" height="602" fill="none" stroke="rgba(224,219,212,0.12)" stroke-width="1"/>
+  <rect x="30" y="30" width="840" height="590" fill="none" stroke="#c49a1c" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Top metadata -->
+  <text x="48" y="64" font-family="'Inter', sans-serif" font-size="11" letter-spacing="3" fill="rgba(255,255,255,0.4)" text-transform="uppercase">WALDO LARGO</text>
+  <text x="852" y="64" font-family="'Inter', sans-serif" font-size="11" letter-spacing="3" fill="#c49a1c" text-anchor="end">AIRE LIBRE</text>
+
+  <!-- Center Content -->
+  <g transform="translate(450, 325)">
+    <!-- Camera/Aperture subtle icon -->
+    <circle cx="0" cy="-60" r="28" fill="none" stroke="#c49a1c" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="0" cy="-60" r="12" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <circle cx="0" cy="-60" r="4" fill="#c49a1c"/>
+    
+    <!-- Title in Serif -->
+    <text x="0" y="15" font-family="'Playfair Display', Georgia, serif" font-size="28" font-style="italic" fill="#f5f0eb" text-anchor="middle">Horizontes Andinos</text>
+    
+    <!-- Placeholder indicator -->
+    <text x="0" y="50" font-family="'Inter', sans-serif" font-size="11" letter-spacing="4" fill="rgba(255,255,255,0.45)" text-anchor="middle" text-transform="uppercase">FOTOGRAFÍA 02</text>
+  </g>
+
+  <!-- Bottom metadata -->
+  <text x="48" y="602" font-family="'Inter', sans-serif" font-size="10" letter-spacing="2" fill="rgba(255,255,255,0.3)">900 × 650 PX</text>
+  <text x="852" y="602" font-family="'Inter', sans-serif" font-size="10" letter-spacing="2" fill="rgba(255,255,255,0.3)" text-anchor="end">PLACEHOLDER</text>
+</svg>
