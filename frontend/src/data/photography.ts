@@ -1,4 +1,4 @@
-export type PhotoCategory = "estudio" | "aire-libre" | "retratos";
+export type PhotoCategory = "fotografia-comercial" | "fotografia-producto" | "retratos";
 
 export interface Photo {
   id: string;
@@ -11,8 +11,8 @@ export interface Photo {
 }
 
 export const photoCategories: { value: PhotoCategory; label: string }[] = [
-  { value: "estudio", label: "Estudio" },
-  { value: "aire-libre", label: "Aire Libre" },
+  { value: "fotografia-comercial", label: "Fotografía Comercial" },
+  { value: "fotografia-producto", label: "  Fotografia Producto" },
   { value: "retratos", label: "Retratos" },
 ];
 
@@ -21,32 +21,32 @@ export const photos: Photo[] = [
   {
     id: "foto-estudio-1",
     src: "/images/photography/estudio/estudio-01.svg",
-    alt: "Fotografía de estudio - Sombra & Forma I",
-    category: "estudio",
+    alt: "Fotografia Comercial - Sombra & Forma I",
+    category: "fotografia-comercial",
     caption: "Sombra & Forma I — Exploración de claroscuro e iluminación dramática.",
     year: "2025",
   },
   {
     id: "foto-estudio-2",
     src: "/images/photography/estudio/estudio-02.svg",
-    alt: "Fotografía de estudio - Geometría Textil",
-    category: "estudio",
+    alt: "Fotografia Comercial - Geometría Textil",
+    category: "fotografia-comercial",
     caption: "Geometría Textil — Moda editorial y texturas de alta costura.",
     year: "2025",
   },
   {
     id: "foto-estudio-3",
     src: "/images/photography/estudio/estudio-03.svg",
-    alt: "Fotografía de estudio - Claroscuro Editorial",
-    category: "estudio",
+    alt: "Fotografia Comercial - Claroscuro Editorial",
+    category: "fotografia-comercial",
     caption: "Claroscuro Editorial — Contrastes profundos en composición horizontal.",
     year: "2024",
   },
   {
     id: "foto-estudio-4",
     src: "/images/photography/estudio/estudio-04.svg",
-    alt: "Fotografía de estudio - Texturas en Silencio",
-    category: "estudio",
+    alt: "Fotografia Comercial - Texturas en Silencio",
+    category: "fotografia-comercial",
     caption: "Texturas en Silencio — Estudio de siluetas y presencia.",
     year: "2025",
   },
@@ -55,32 +55,32 @@ export const photos: Photo[] = [
   {
     id: "foto-aire-1",
     src: "/images/photography/aire-libre/aire-libre-01.svg",
-    alt: "Fotografía de exteriores - Luz Natural & Viento",
-    category: "aire-libre",
+    alt: "Fotografia Producto - Luz Natural & Viento",
+    category: "fotografia-producto",
     caption: "Luz Natural & Viento — Captura de movimiento en exteriores.",
     year: "2025",
   },
   {
     id: "foto-aire-2",
     src: "/images/photography/aire-libre/aire-libre-02.svg",
-    alt: "Fotografía de exteriores - Horizontes Andinos",
-    category: "aire-libre",
+    alt: "Fotografia producto - Horizontes Andinos",
+    category: "fotografia-producto",
     caption: "Horizontes Andinos — Paisajes y composiciones panorámicas.",
     year: "2024",
   },
   {
     id: "foto-aire-3",
     src: "/images/photography/aire-libre/aire-libre-03.svg",
-    alt: "Fotografía de exteriores - Atardecer Dorado",
-    category: "aire-libre",
+    alt: "Fotografia Producto - Atardecer Dorado",
+    category: "fotografia-producto",
     caption: "Atardecer Dorado — La hora mágica y la calidez natural.",
     year: "2025",
   },
   {
     id: "foto-aire-4",
     src: "/images/photography/aire-libre/aire-libre-04.svg",
-    alt: "Fotografía de exteriores - Espacios Abiertos",
-    category: "aire-libre",
+    alt: "Fotografia Producto - Espacios Abiertos",
+    category: "fotografia-producto",
     caption: "Espacios Abiertos — Diálogo entre la figura humana y el entorno.",
     year: "2024",
   },
