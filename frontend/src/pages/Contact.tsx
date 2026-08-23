@@ -1,5 +1,5 @@
 import ContactForm from "../components/ContactForm";
-import { whatsappUrl } from "../config/contact";
+import { whatsappUrl, instagramUrl, INSTAGRAM_USERNAME } from "../config/contact";
 
 export default function Contact() {
   return (
@@ -24,8 +24,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* WhatsApp CTA */}
-          <div className="mt-10">
+          {/* Social CTAs — WhatsApp + Instagram */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <a
               href={whatsappUrl}
               target="_blank"
@@ -44,6 +44,33 @@ export default function Contact() {
               </svg>
               <span className="text-xs uppercase tracking-[0.12em] font-medium">
                 Escríbeme por WhatsApp
+              </span>
+            </a>
+
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-[var(--color-ink)] px-8 py-3 text-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-[var(--color-offwhite)] transition-all duration-300 group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="shrink-0"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              <span className="text-xs uppercase tracking-[0.12em] font-medium">
+                @{INSTAGRAM_USERNAME}
               </span>
             </a>
           </div>
