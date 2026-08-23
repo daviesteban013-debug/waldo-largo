@@ -38,7 +38,7 @@ export default function About() {
         <div className="md:col-span-4 md:col-start-9 fade-in-up stagger-2">
           <div className="aspect-[3/4] bg-black overflow-hidden relative w-full">
             <img
-              src="/images/author-portrait.jpeg"
+              src="/images/author-portrait.webp"
               alt="Waldo Largo"
               loading="lazy"
               className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"

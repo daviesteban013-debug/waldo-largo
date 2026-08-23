@@ -21,9 +21,9 @@ export default function Home() {
           {/* Portrait column */}
           <div className="order-1 md:order-2 bg-black overflow-hidden relative">
             <img
-              src="/images/author-portrait.jpeg"
+              src="/images/author-portrait.webp"
               alt="Waldo Largo"
-              loading="lazy"
+              loading="eager"
               className="w-full aspect-[3/4] object-cover object-top grayscale transition-all duration-700"
             />
             {/* Subtle vignette overlay */}
@@ -59,6 +59,7 @@ export default function Home() {
                     <img
                       src={book.coverImage}
                       alt={`Portada de ${book.title}`}
+                      loading="lazy"
                       className="w-full aspect-[2/3] object-cover transition-all duration-700 group-hover:scale-[1.02] group-hover:opacity-90"
                     />
                   </div>

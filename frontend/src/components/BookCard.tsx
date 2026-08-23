@@ -12,6 +12,7 @@ export default function BookCard({ book }: BookCardProps) {
         <img
           src={book.coverImage}
           alt={`Portada de ${book.title}`}
+          loading="lazy"
           className="w-full aspect-[2/3] object-cover transition-all duration-700 group-hover:scale-[1.02] group-hover:opacity-90"
         />
       </div>
