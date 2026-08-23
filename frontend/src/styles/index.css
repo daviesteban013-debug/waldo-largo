@@ -107,6 +107,24 @@
   .stagger-4 { animation-delay: 0.4s; }
 }
 
+/* ─── Justified text for long-form content paragraphs ───
+   Left-aligned on mobile (< 768px) to avoid ugly word-spacing
+   in narrow columns; justify + hyphens on tablet/desktop. */
+.prose-justify {
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-spacing: normal;
+}
+
+@media (min-width: 768px) {
+  .prose-justify {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+}
+
 /* ─── Prose (article body) ─── */
 @layer components {
   .prose {

@@ -12,7 +12,7 @@ export default function Home() {
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium text-[var(--color-ink)] leading-[1.1] mb-6">
               Waldo Largo
             </h1>
-            <p className="text-justify text-lg text-[var(--color-ink-muted)] max-w-md leading-relaxed">
+            <p className="prose-justify text-lg text-[var(--color-ink-muted)] max-w-md leading-relaxed">
               Waldo Largo es fotógrafo, escritor, director creativo y recordador álmico; un artista que fusiona la imagen, la palabra y la conciencia para revelar la verdad profunda que habita detrás de cada rostro. Con una destacada trayectoria internacional y publicaciones en revistas como Vogue, su lente va más allá de la estética para capturar la identidad, la fuerza y la vulnerabilidad humana, creando retratos que no solo se observan, sino que se sienten.
               Esa misma sensibilidad atraviesa su faceta como autor de obras de transformación interior, como ¿En serio? y Divino Abismo (Best Seller en Amazon), a través de las cuales acompaña a sus lectores a sanar y convertir sus heridas en sabiduría. Ya sea detrás de una cámara o a través de la literatura, su propósito como recordador álmico no es dictar quién debes ser, sino ayudarte a recordar quién has sido siempre. En definitiva, la obra de Waldo es un encuentro íntimo con la esencia: un espacio creado para retratar historias, escribir memorias y despertar almas.
             </p>

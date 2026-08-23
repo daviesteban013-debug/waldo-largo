@@ -39,7 +39,7 @@ export default function BookCard({ book }: BookCardProps) {
         )}
 
         {/* Description */}
-        <p className="text-[var(--color-ink-muted)] leading-relaxed text-[0.95rem]">
+        <p className="prose-justify text-[var(--color-ink-muted)] leading-relaxed text-[0.95rem]">
           {book.description}
         </p>
 

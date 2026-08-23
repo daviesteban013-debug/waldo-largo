@@ -8,7 +8,7 @@ export default function About() {
             Sobre mí
           </h1>
 
-          <div className="space-y-5 text-[var(--color-ink-light)] leading-relaxed text-lg max-w-xl">
+          <div className="prose-justify space-y-5 text-[var(--color-ink-light)] leading-relaxed text-lg max-w-xl">
             <p>
               Soy <strong className="text-[var(--color-ink)] font-medium">Waldo Largo</strong>, escritor
               Waldo Largo es un fotógrafo, escritor, director creativo y recordador álmico colombiano que busca revelar la esencia humana a través del arte.
