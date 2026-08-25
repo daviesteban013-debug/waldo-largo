@@ -30,9 +30,11 @@ export function csrfProtection(req: Request, res: Response, next: NextFunction):
     return;
   }
 
-  const allowedOrigin = new URL(env.FRONTEND_URL).origin;
+  const allowedOrigins = new Set(
+    env.ALLOWED_ORIGINS.map((url) => new URL(url).origin)
+  );
 
-  if (origin !== allowedOrigin) {
+  if (!allowedOrigins.has(origin)) {
     res.status(403).json({ error: "Forbidden: invalid origin" });
     return;
   }

@@ -45,7 +45,7 @@ export function createApp() {
           scriptSrc: ["'self'"],
           styleSrc: ["'self'", "'unsafe-inline'"],
           imgSrc: ["'self'", "data:", "https:"],
-          connectSrc: ["'self'", env.FRONTEND_URL],
+          connectSrc: ["'self'", ...env.ALLOWED_ORIGINS],
           fontSrc: ["'self'", "https:", "data:"],
           objectSrc: ["'none'"],
           upgradeInsecureRequests: isProduction ? [] : null,

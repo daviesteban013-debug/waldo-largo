@@ -11,7 +11,15 @@ dotenv.config();
 const envSchema = z.object({
   NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
   PORT: z.coerce.number().int().positive().default(4000),
-  FRONTEND_URL: z.url().default("http://localhost:5173"),
+  ALLOWED_ORIGINS: z
+    .string()
+    .default("http://localhost:5173")
+    .transform((val) =>
+      val
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean)
+    ),
   DATABASE_URL: z.string().min(1, "DATABASE_URL is required for database connection"),
   SESSION_SECRET: z.string().min(32, "SESSION_SECRET must be at least 32 characters long for cryptographically secure cookies"),
   ADMIN_EMAIL: z.email().optional(),
