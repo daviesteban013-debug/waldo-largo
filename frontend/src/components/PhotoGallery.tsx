@@ -79,9 +79,6 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center gap-4">
-              <span className="text-xs uppercase tracking-[0.15em] text-[var(--color-accent)] font-medium">
-                {selectedPhoto.category.replace("-", " ")}
-              </span>
               <span className="text-xs tracking-wider text-white/50 tabular-nums">
                 {String(selectedIndex + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}
               </span>
@@ -147,11 +144,6 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
                 <p className="font-serif text-base md:text-lg text-[#f5f0eb] leading-relaxed">
                   {selectedPhoto.caption}
                 </p>
-              )}
-              {selectedPhoto.year && (
-                <span className="inline-block mt-1 text-xs tracking-widest text-white/40 uppercase">
-                  {selectedPhoto.year}
-                </span>
               )}
             </div>
           </div>
